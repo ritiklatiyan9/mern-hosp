@@ -24,10 +24,15 @@ const Login = () => {
           headers: { "Content-Type": "application/json" },
         }
       );
-      console.log('Response:', res);
       toast.success(res.data.message);
+  
+      // Update authentication state and user details
       setIsAuthenticated(true);
+  
+      // Only navigate after state update
       navigateTo("/");
+  
+      // Clear form fields
       setEmail("");
       setPassword("");
       setConfirmPassword("");

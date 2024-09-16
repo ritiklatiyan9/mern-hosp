@@ -31,7 +31,7 @@ const App = () => {
         setIsAuthenticated(true);
         setUser(response.data.user);
       } catch (error) {
-        console.error("Error Occuring after login:", error);
+       
         setIsAuthenticated(false);
         setUser({});
       }
