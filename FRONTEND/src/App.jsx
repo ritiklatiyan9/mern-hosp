@@ -15,7 +15,7 @@ import { Context } from "./main";
 import Login from "./pages/login";
 import MyAppoitment from "./components/MyAppointments";
 const App = () => {
-  const { isAuthenticated, setIsAuthenticated, setUser } = useContext(Context);
+  const { isAuthenticated, setIsAuthenticated, user, setUser } = useContext(Context);
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -31,7 +31,6 @@ const App = () => {
         setIsAuthenticated(true);
         setUser(response.data.user);
       } catch (error) {
-       
         setIsAuthenticated(false);
         setUser({});
       }

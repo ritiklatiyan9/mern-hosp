@@ -9,6 +9,8 @@ export const genrateToken = (user, message, statusCode, res) => {
         Date.now() + process.env.COOKIE_EXPIRE * 24 * 60 * 60 * 1000
       ),
       httpOnly: true,
+      secure: process.env.NODE_ENV === 'production', // Ensures the cookie is sent only over HTTPS in production
+      sameSite: 'None', // Allows cross-domain cookie sharing
     })
     .json({
       success: true,
