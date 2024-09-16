@@ -1,0 +1,38 @@
+@font-face {
+    font-family: "Test Founders Grotesk X-Cond Sm";
+    src: url("/fonts/Test-Founders-Grotesk-X-Cond-Sm.woff2") format("woff2"),
+      url("/fonts/Test-Founders-Grotesk-X-Cond-Sm.ttf") format("truetype"); /* Fallback */
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Aquire Regular";
+    src: url("/fonts/Aquire-Regular.woff2") format("woff2"),
+      url("/fonts/Aquire-Regular.ttf") format("truetype"); /* Fallback */
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Neue Montreal Regular";
+    src: url("/fonts/Neue-Montreal-Regular.woff2") format("woff2"),
+      url("/fonts/Neue-Montreal-Regular.ttf") format("truetype"); /* Fallback */
+    font-weight: 600;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Auralyess Free Trial Regular";
+    src: url("/fonts/Auralyess-Free-Trial-Regular.woff2") format("woff2"),
+      url("/fonts/Auralyess-Free-Trial-Regular.woff2") format("truetype"); /* Fallback */
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Speedy Regular";
+    src: url("/fonts/Speedy-Regular.ttf") format("truetype"); /* Fallback */
+    font-weight: 600;
+    font-style: normal;
+  }
+  
