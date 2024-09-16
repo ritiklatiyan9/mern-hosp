@@ -23,7 +23,8 @@ export const isAdminAuthenticated = catchAsyncErrors(async (req, res, next) => {
 export const isPatientAuthenticated = catchAsyncErrors(async (req, res, next) => {
     const token = req.cookies.patientToken;
     if (!token) {
-        return next(new ErrorHandler("Patient not authenticated", 401));
+    
+        return next(new ErrorHandler("Token Patient not authenticated", 401));
     }
 
     const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY);

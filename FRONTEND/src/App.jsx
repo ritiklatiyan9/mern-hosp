@@ -15,14 +15,15 @@ import { Context } from "./main";
 import Login from "./pages/login";
 import MyAppoitment from "./components/MyAppointments";
 const App = () => {
-  const { isAuthenticated, setIsAuthenticated, setUser } =
-    useContext(Context);
+  const { isAuthenticated, setIsAuthenticated, setUser } = useContext(Context);
 
   useEffect(() => {
     const fetchUser = async () => {
       try {
         const response = await axios.get(
-          `${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/v1/user/patient/me`,
+          `${
+            import.meta.env.VITE_REACT_APP_BACKEND_BASEURL
+          }/api/v1/user/patient/me`,
           {
             withCredentials: true,
           }
@@ -30,6 +31,7 @@ const App = () => {
         setIsAuthenticated(true);
         setUser(response.data.user);
       } catch (error) {
+        console.error("Error Occuring after login:", error);
         setIsAuthenticated(false);
         setUser({});
       }
