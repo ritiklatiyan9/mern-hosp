@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "main": "server.js",
+  "proxy": "https://mern-hosp-backend.vercel.app",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
